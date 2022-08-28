@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Trabalhando com ajax</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='assets/css/reset.css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="" id="cssPadrao">
+</head>
+<body>
+    <header>
+        <h1 class="text-center pt-3 mb-5">Trabalhando com ajax</h1>
+    </header>
+    <main>
+        <section>
+            <h2 class="mx-4 mb-4">Consulta de cep</h2>
+            <form>
+                <div class="row mx-2 mb-3">
+                    <div class="input-group col">
+                        <input type="text" class="form-control" placeholder="Entre com cep" aria-label="Entre com cep" id="campCep" value="13732680">
+                        <button class="btn btn-outline-secondary" type="button" id="btnPesquisar">Pesquisar</button>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Entre com o endereço" aria-label="endereco" id="campEndereco">
+                    </div>
+                </div>
+                <div class="row mx-2 mb-3">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Entre com bairro" aria-label="Entre com cep" id="campBairro">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Entre com o cidade" aria-label="endereco" id="campCidade">
+                    </div>
+                </div>
+                <div class="row mx-2">
+                    <div class="col-9">
+                        <input type="text" class="form-control" placeholder="Entre com Complemento" aria-label="Entre com cep" id="campComplemento">
+                    </div>
+                    <div class="col-3">
+                        <input type="text" class="form-control" placeholder="Entre com UF" aria-label="Entre com cep" id="campUf">
+                    </div>
+                </div>
+            </form>
+        </section>
+        <section>
+            <hr>
+            <h2 class="mt-4 mx-4 mb-4">Requisitando paginas</h2>
+            <div class="container mb-5">
+                <div class="row">
+                    <div class="col"><button class="btn btn-primary" id="btnOne">Conteudo um</button></div>
+                    <div class="col"><button class="btn btn-primary" id="btnTwo">Conteudo dois</button></div>
+                    <div class="col"><button class="btn btn-primary" id="btnThree">Conteudo tres</button></div>
+                </div>
+            </div>
+            <div class="container" id="localExibicaoDados">
+                <p class="msgExibicaoPag">Nenhuma pagina esta sendo exibida!!</p>
+            </div>
+        </section>
+        <section>
+            <hr>
+            <h2 class="mt-4 mx-4 mb-4">buscando a previsao do tempo para uma cidade</h2>
+            <form class="mx-4 mb-3">
+                <div class="input-group ">
+                    <input type="text" class="form-control" placeholder="Entre com a cidade" aria-label="Entre com nome da cidade" id="campCidadePrevisao" value="mococa">
+                    <button class="btn btn-outline-secondary" type="button" id="btnPesquisarPrevisaoTempo">Pesquisar</button>
+                </div>
+            </form>
+            <h3 class="mt-4 mx-4 mb-4 subTitle-previsao">Previsao do tempo para</h3>
+            <div class="previTemp-info row mb-5"></div>
+            <div class="row mx-4 previTemp-container"></div>
+        </section>
+        <div class="loader-animation">
+            <div class="c-loader"></div>
+        </div>
+     </main>
+</body>
+<script type="module" src="assets/js/main.js"></script>
+</html>
